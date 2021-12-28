@@ -1,1 +1,8 @@
-# TODO: MLflow
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - mlflow=1.22
+  - pip
+  - pip:
+    - awslambdaric==2.0
