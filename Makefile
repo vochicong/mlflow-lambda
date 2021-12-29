@@ -1,4 +1,4 @@
-all: build run
+all: train build run
 
 # Build image
 build:
@@ -8,9 +8,8 @@ build:
 run:
 	docker run -p 9000:8080 --entrypoint /aws-lambda/aws-lambda-rie \
 	-v ~/.aws-lambda-rie:/aws-lambda \
-	-v $(PWD)/src:/function \
-	-v $(PWD)/models:/function/models \
 	hello-world /function/entry.sh app.handler
+# -v $(PWD)/src:/function -v $(PWD)/models:/function/models \
 
 # Testing function invocation
 test:

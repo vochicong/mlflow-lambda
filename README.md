@@ -10,7 +10,13 @@ When deployed to AWS Lambda, the container will add a small integer to any input
 
 ## Commands
 
-Use Makefile.
+Train, build and run a container
+
+    make train build run
+
+Test the container
+
+    make test
 
 ### Test data
 
